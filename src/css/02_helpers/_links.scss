@@ -1,0 +1,9 @@
+// Helpers : Liens
+// =================
+// Placeholders pour les différents styles de liens du site. 
+
+%neutral-link {
+  @include link-colors($color-text-primary, darken($color-text-primary, 10%));
+  @extend %color-transition;
+  text-decoration: underline;
+}

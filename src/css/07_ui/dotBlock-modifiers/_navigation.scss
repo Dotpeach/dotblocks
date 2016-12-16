@@ -1,0 +1,32 @@
+// DwxBlocks : Navigation
+// ----------------------
+// Navigation interne sur le page
+&.is-navigation {
+  @include smallLayout {
+    display: none;
+  }
+  .dwxLink {
+    color: #909090;
+    font-size: rem(12px);
+    &:hover {
+    }
+  }
+}
+
+// Block de navigation :
+.dwxBlock_nav {
+  margin: auto;
+}
+.dwxBlock_nav_list {}
+.dwxBlock_nav_item {
+  display: inline-block;
+  + .dwxBlock_nav_item {
+    margin-left: 45px;
+  }
+}
+.dwxBlock_nav_link {
+  color: #909090;
+  font-size: rem(12px);
+  &:hover {
+  }
+}

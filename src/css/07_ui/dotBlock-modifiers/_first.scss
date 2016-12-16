@@ -1,0 +1,114 @@
+// DwxBlocks : First Block
+// -----------------------
+// Block en haut de la page
+
+&.is-first {
+  //height: 550px;
+  @include box-sizing(border-box);
+  min-height: 550px;
+  padding-top: 90px; // Hauteur du header
+  @include display-flex;
+  @include mobileLayout {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .dwxBlock_content {
+    @include display-flex;
+    align-items: center;
+    width: $container-width;
+    color: #fff;
+    margin-bottom: rem(60px);
+    @include smallLayout {
+      width: 100%;
+    }
+  }
+  .dwxBlock_intro {
+    max-width: rem(400px);
+  }
+  .dwxBlock_intro_title {
+    @extend %headingfont;
+    font-size: ppm-pxem(40px, 18px);
+    line-height: rem(50px);
+    margin-bottom: rem(30px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .dwxBlock_intro_desc {
+    font-size: ppm-pxem(18px, 18px);
+  }
+  .dwxBlock_intro_action {
+    margin-top: rem(25px);
+    @include border-radius(3px);
+    display: inline-block;
+    background-color: #3887be;
+    //background-color: $dawexBlue;
+    padding: rem(10px) rem(20px);
+    font-size: rem(12px);
+    line-height: rem(20px);
+    @extend %webfont-bold;
+    color: #fff;
+  }
+
+  &.has-navigation {
+    @include flex-wrap(wrap);
+    .dwxBlock_content {
+      @include flex-direction(column);
+      @include box-sizing(border-box);
+      padding-top: 30px;
+      position: relative;
+      justify-content: center;
+      @include mobileLayout {
+        padding-top: 40px;
+      }
+    }
+    .dwxBlock_intro {
+      align-self: flex-start;
+    }
+    .dwxBlock_intro_title {
+      padding-top: 40px;
+    }
+  }
+  &.has-darkColor {
+    .dwxBlock_content {
+      color: rgba(0, 0, 0, 0.74);
+    }
+  }
+  &.is-fullWidth,
+  &.has-centeredTxt {
+    .dwxBlock_intro {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  &.is-halfWidth {
+    .dwxBlock_intro {
+      max-width: 50%;
+      width: 50%;
+      @include mobileLayout {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &.is-thirdWidth {
+    .dwxBlock_intro {
+      max-width: 33.33%;
+      width: 33.33%;
+      @include mobileLayout {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+  &.is-2thirdWidth {
+    .dwxBlock_intro {
+      max-width: 66.66%;
+      width: 66.66%;
+      @include mobileLayout {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

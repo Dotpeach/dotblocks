@@ -1,0 +1,41 @@
+{# _default.twig #}
+{# Ce gabarit est utilisé par les pages du projets #}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+
+  <title>{{ title }}</title>
+
+  <link href="{% root %}/css/styles.css" rel="stylesheet">
+  <script src="{% root %}/js/script.js" async></script>
+</head>
+<body>
+<div id="global">
+  <header id="header">
+    <div class="header_inner">
+      <div class="header_identity">
+        <h1 class="header_logo">
+          <span class="sr-only">Dotblock</span>
+          <svg class="dot-dotblock"><use xlink:href="{% root %}/img/icons.svg#dot-dotblock"></use></svg>
+        </h1>
+      </div>
+      <nav class="header_nav">
+        <ul class="header_nav_list">
+          <li class="header_nav_item"><a href="#" class="header_nav_lk">Item menu</a></li>
+          <li class="header_nav_item"><a href="#" class="header_nav_lk">Item menu</a></li>
+          <li class="header_nav_item"><a href="#" class="header_nav_lk">Item menu</a></li>
+          <li class="header_nav_item"><a href="#" class="header_nav_lk">Item menu</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <p>Insérer les dotblocks Ici :)</p>
+    {% block main %}{% endblock %}
+  </main>
+</div>
+</body>
+</html>

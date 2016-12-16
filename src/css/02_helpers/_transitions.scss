@@ -1,0 +1,74 @@
+// Helpers : transitions
+// =====================
+// Placeholders pour la gestion de transitions CSS
+
+
+%neutral-transition {
+  @include transition-duration($transition-duration);
+  &:hover {
+    @include transition-duration($transition-duration);
+  }
+}
+
+%bg-transition {
+  // @include transition-duration(0.6s);
+  @include transition-property(background-color);
+  &:hover {
+    @include transition-property(background-color);
+    @include transition-duration($transition-duration);
+  }
+}
+
+%color-transition {
+  @include transition-property(color);
+  @include transition-duration($transition-duration);
+  &:hover {
+    @include transition-property(color);
+    @include transition-duration($transition-duration);
+  }
+}
+
+%border-color-transition {
+  @include transition-property(border-color);
+  @include transition-duration($transition-duration);
+  &:hover {
+    @include transition-property(border-color);
+    @include transition-duration($transition-duration);
+  }
+}
+
+%pleft-transition {
+  @include transition-property(padding-left);
+  @include transition-duration($transition-duration);
+  &:hover {
+  @include transition-property(padding-left);
+    @include transition-duration($transition-duration);
+  }
+}
+
+%bleft-transition {
+  @include transition-property(border-left);
+  @include transition-duration($transition-duration);
+  &:hover {
+  @include transition-property(border-left);
+    @include transition-duration($transition-duration);
+  }
+}
+
+%opacity-transition {
+  @include transition-property(opacity);
+  @include transition-duration($transition-duration);
+  &:hover {
+  @include transition-property(opacity);
+    @include transition-duration($transition-duration);
+  }
+}
+
+%width-transition {
+  @include transition-property(width);
+  @include transition-duration($transition-duration);
+  &:hover {
+  @include transition-property(width);
+    @include transition-duration($transition-duration);
+  }
+}

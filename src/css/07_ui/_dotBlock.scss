@@ -1,0 +1,70 @@
+// UI : dotBlock
+// ==============
+// Jeu de blocks pour le contenu
+
+// Gestion des modifiers :
+// -------------------
+.dotBlock {
+  @include box-sizing(border-box);
+  width: 100%;
+  @import "./dotBlock-modifiers/first";
+  @import "./dotBlock-modifiers/dimensions";
+  @import "./dotBlock-modifiers/paddings";
+  @import "./dotBlock-modifiers/backgrounds";
+  @import "./dotBlock-modifiers/overlays";
+  @import "./dotBlock-modifiers/borders";
+  @import "./dotBlock-modifiers/content-text";
+  @import "./dotBlock-modifiers/content-img";
+  @import "./dotBlock-modifiers/navigation";
+  @import "./dotBlock-modifiers/square";
+}
+
+// STYLES PAR DÉFAUT
+// =================
+
+// Contenu d'un block :
+.dotBlock_intro {
+  align-self: center;
+}
+
+.dotBlock_title {
+  @extend %webfont-bold;
+  font-size: ppm-pxem(30px, 18px);
+  line-height: rem(40px);
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+  &.is-smaller {
+    font-size: ppm-pxem(22px, 18px);
+  }
+}
+
+.dotBlock_content {
+  font-size: ppm-pxem(18px);
+  line-height: rem(30px);
+  color: $dotBlock-txtcolor;
+  @include box-sizing(border-box);
+  @include smallLayout {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    //line-height: $base-line-height;
+  }
+}
+
+// Gestion des zones d'action
+.dotBlock_action {
+  margin-top: 20px;
+  .dotBtn {}
+  &.has-leftContent {
+    text-align: left;
+  }
+  &.has-centeredContent {
+    text-align: center;
+  }
+  &.has-rightContent {
+    text-align: right;
+  }
+  &.is-afterBullets {
+    padding-left: 60px;
+  }
+}

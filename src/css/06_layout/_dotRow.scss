@@ -1,0 +1,18 @@
+// Layout : dotRow
+// ===============
+// Ligne destinée à contenir les dotblocks
+
+// Gestion de la ligne container :
+// ------------------------------
+.dotRow {
+  @include display-flex;
+  flex-wrap: nowrap;
+  @include flex-direction(row);
+  align-items: stretch;
+  .dwxBlock {
+    min-height: 100px;
+  }
+  @include smallLayout {
+    @include flex-direction(column);
+  }
+}

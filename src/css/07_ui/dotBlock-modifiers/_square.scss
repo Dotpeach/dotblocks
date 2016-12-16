@@ -1,0 +1,92 @@
+// DwxBlocks : Square
+// --------------------
+// Carrés de contenus
+
+.dwxBlock_square {
+  @include display-flex;
+  @include flex-direction(row);
+  justify-content: space-between;
+  margin-top: 50px;
+  @include mobileLayout {
+    @include flex-direction(column);
+    .dwxBlock_square_item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.dwxBlock_square_item {
+  background-color: #f8f8f8;
+  @include box-sizing(border-box);
+  margin-right: rem(10px);
+  @include border-radius(3px);
+  //padding: 35px 20px;
+  padding: 15px 20px;
+  @include flex(1 0 0px); // égalise les largeurs
+  @include mobileLayout {
+    @include box-sizing(initial);
+  }
+  &.is-first {
+    background-color: transparent;
+    padding: 15px 20px;
+    .dwxBlock_square_title {
+      font-size: rem(18px);
+    }
+    .dwxBlock_square_content {
+      color: rgba(#000, 0.5);
+      font-size: rem(15px);
+      line-height: rem(25px);
+    }
+  }
+  + .dwxBlock_square_item {
+    margin-left: rem(10px);
+    @include mobileLayout {
+      margin-left: 0;
+    }
+  }
+}
+
+.dwxBlock_square_tag {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.dwxBlock_square_title {
+  @extend %webfont-bold;
+  display: inline-block;
+  margin-bottom: rem(10px);
+  //font-size: rem(15px);
+}
+
+.dwxBlock_square_content {
+  font-size: rem(13px);
+  line-height: rem(23px);
+}
+
+.dwxBlock_square_link {
+  margin-top: 10px;
+ &, a {
+   @extend %webfont-bold;
+   color: rgba(0,0,0,0.5);
+   fill: rgba(0,0,0,0.5);
+   font-size: rem(12px);
+
+ }
+  a {
+    @include transition(all .3s ease-in);
+    + a {
+      margin-left: 10px;
+    }
+    &:hover {
+      color: rgba(0,0,0,0.7);
+      fill: rgba(0,0,0,0.7);
+    }
+  }
+  svg {
+    display: inline;
+    @include square(10px);
+    position: relative;
+    top: 1px;
+  }
+}

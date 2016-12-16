@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'scss_lint'
+require 'scss_lint/cli'
+
+exit SCSSLint::CLI.new.run(ARGV)

@@ -1,0 +1,54 @@
+// DwxBlocks : Overlays
+// --------------------
+@mixin dwxBlock-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+&.has-blackOverlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  &:before {
+    content: "";
+    @include dwxBlock-overlay;
+    background-color: rgba( #000, .6 );
+  }
+  .dwxBlock_title {}
+  .dwxBlock_content {
+    color: #fff;
+  }
+}
+
+&.has-greyOverlay {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  &:before {
+    content: "";
+    @include dwxBlock-overlay;
+    background-color: rgba( #000, .4 );
+  }
+  .dwxBlock_title {}
+  .dwxBlock_content {
+    color: #fff;
+  }
+}
+
+
+&.has-whiteOverlay {
+  position: relative;
+  z-index: 1;
+  //color: #fff;
+  &:before {
+    content: "";
+    @include dwxBlock-overlay;
+    background-color: rgba( #fff, .7 );
+  }
+}
+

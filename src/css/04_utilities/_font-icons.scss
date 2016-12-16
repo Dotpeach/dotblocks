@@ -1,0 +1,163 @@
+// Utilities : Pilot Icons
+// =======================
+// Font-icon custom pour Pilot
+
+// Import de la font
+// ------------------
+@charset "UTF-8";
+@include font-face('pilot-icons',
+  font-files('pilot-icons.woff', woff,
+    'pilot-icons.ttf' , truetype,
+    'pilot-icons.svg#pilot-icons', svg),
+  'pilot-icons.eot', normal, normal);
+
+// Class générale de la font
+// -------------------------
+.plt-ico,
+%plt-ico,
+%font-icon {
+  // Ajouts perso :
+  // --------------
+  display: inline-block;
+  font: normal normal normal 14px/1 "pilot-icons";
+  font-size: inherit;
+  text-rendering: auto;
+  @include font-smoothing(on);
+  //transform: translate(0, 0);
+  //font-size: 1.25em; // Correction du problème de dimension
+  vertical-align: middle;
+
+  // Fontastic :
+  // ----------
+  line-height: $base-line_height;
+  //font-family: "plt-icoons" !important;
+  //font-style: normal !important;
+  //font-weight: normal !important;
+  //font-variant: normal !important;
+  //text-transform: none !important;
+  speak: none;
+  //-webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+  line-height: 50%;
+  position: relative;
+}
+
+// Utilisation de la balise <i>
+// ---------------------------
+i.plt-ico {
+  display: inline-block;
+}
+
+// Animation des icônes
+// --------------------
+// SPIN
+.plt-ico-spin, %plt-ico-spin {
+  -webkit-animation: plt-ico-spin 2s infinite linear;
+  animation: plt-ico-spin 2s infinite linear;
+}
+@-webkit-keyframes plt-ico-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes plt-ico-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+// PULSE
+.plt-ico-pulse, %plt-ico-pulse {
+  -webkit-animation: plt-ico-spin 1s infinite steps(8);
+  animation: plt-ico-spin 1s infinite steps(8);
+}
+
+// Liste des icônes
+// ----------------
+
+$fi-iconList: (
+        youtube        : '\e000',
+        twitter        : '\e001',
+        angle-up       : '\e002',
+        envelope-o     : '\e003',
+        times          : '\e004',
+        angle-down     : '\e005',
+        angle-left     : '\e006',
+        angle-right    : '\e007',
+        search         : '\e008',
+        map-marker     : '\e009',
+        tint           : '\e00a',
+        star           : '\e00b',
+        carret-down    : '\e00c',
+        play           : '\e00d',
+        heart-o        : '\e00e',
+        star-half      : '\e00f',
+        plus           : '\e010',
+        minus          : '\e011',
+        arrow-left     : '\e012',
+        arrow-right    : '\e013',
+        life-ring      : '\e014',
+        times-circle   : '\e015',
+        pinterest      : '\e016',
+        3dsimulation   : '\e017',
+        begreen        : '\e018',
+        business-gifts : '\e019',
+        check          : '\e01a',
+        eiffel         : '\e01b',
+        pen            : '\e01c',
+        pilot-logo     : '\e01e',
+        quotation      : '\e01f',
+        quote-right    : '\e021',
+        writing        : '\e022',
+        penprinting    : '\e01d',
+        shopping-cart  : '\e023',
+        instagram      : '\e024',
+        facebook       : '\e026',
+        download       : '\e025'
+);
+
+
+@mixin fi-create-rules {
+  @each $icon-name, $icon-glyph in $fi-iconList {
+    %fi-#{$icon-name} {
+      @extend %font-icon;
+      content: $icon-glyph;
+      line-height: 1;
+    }
+    .plt-ico-#{$icon-name}::before {
+      @extend %font-icon;
+      content: $icon-glyph;
+    }
+  }
+}
+
+@include fi-create-rules;
+
+.plt-ico-envelope-o {
+  color: $color-text-black;
+}
+.plt-ico-instagram {
+  color: $instagram-color;
+}
+.plt-ico-twitter {
+  color: $twitter-color;
+}
+.plt-ico-facebook {
+  color: $facebook-color;
+}
+.plt-ico-pinterest {
+  color: $pinterest-color;
+}
+.plt-ico-youtube {
+  color: $youtube-color;
+}

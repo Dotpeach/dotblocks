@@ -1,0 +1,16 @@
+// DwxBlocks : Borders
+// -------------------
+//
+
+&.has-topBorder {
+  border-top: 1px solid rgba(0,0,0,0.10);
+}
+&.has-bottomBorder {
+  border-bottom: 1px solid rgba(0,0,0,0.10);
+}
+&.has-leftBorder {
+  border-left: 1px solid rgba(0,0,0,0.10);
+}
+&.has-rightBorder {
+  border-right: 1px solid rgba(0,0,0,0.10);
+}

@@ -1,0 +1,199 @@
+// DwxBlocks : Backgrounds
+// -----------------------
+
+&.has-coverImg {
+  @extend %bg-cover;
+}
+
+// Nuances de gris
+// ---------------
+&.has-lightBg {
+  color: #fff;
+  background-color: $panelLight;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-darkBg {
+  color: #fff;
+  background-color: $panelDark;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-darkestBg {
+  color: #fff;
+  background-color: $panelDarkest;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+
+// Panels de couleurs
+// -----------------
+&.has-greenBg {
+  color: #fff;
+  background-color: $panelGreen;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-pinkBg {
+  color: #fff;
+  background-color: $panelPink;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-orangeBg {
+  color: #fff;
+  background-color: $panelOrange;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-lightgreyBg {
+  //color: #fff;
+  background-color: $panelLightGrey;
+  .dwxBlock_content {
+    //color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    //fill: #fff;
+  }
+}
+&.has-emeraldBg {
+  color: #fff;
+  background-color: $panelEmerald;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-blueBg {
+  color: #fff;
+  background-color: $panelBlue;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-cyanBg {
+  color: #fff;
+  background-color: $panelCyan;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.is-empty {
+  color: #fff;
+  background-color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+
+// Dégradés de couleurs
+// --------------------
+&.has-blueGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelBlue 0%,$panelBlue-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-cyanGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelCyan 0%,$panelCyan-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-greenGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelGreen 0%,$panelGreen-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-pinkGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelPink 0%,$panelPink-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-orangeGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelOrange 0%,$panelOrange-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+&.has-emeraldGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelEmerald 0%,$panelEmerald-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}
+
+&.has-lightgreyGradient {
+  color: #fff;
+  @include background-image(linear-gradient(165deg, $panelLight 0%,$panelLightGrey-darker 100%));
+  .dwxBlock_content {
+    color: #fff;
+  }
+  .bulletList_icon .dwxicon-dwxvalidcircle {
+    fill: #fff;
+  }
+}

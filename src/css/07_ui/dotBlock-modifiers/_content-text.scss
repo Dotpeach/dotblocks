@@ -1,0 +1,14 @@
+// DwxBlocks : Content Text
+// ------------------------
+// Typography, content…
+
+&.has-centeredTxt {
+  text-align: center;
+}
+
+&.has-lightTxt {
+  color: #fff;
+  .dwxBlock_content {
+    color: #fff;
+  }
+}

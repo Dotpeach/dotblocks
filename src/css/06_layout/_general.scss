@@ -1,0 +1,81 @@
+// Layout : général
+// ================
+//
+
+// Styles génériques sur HTML/Body
+// -------------------------------
+//html {
+//}
+
+body {
+  @include font-smoothing(on);
+  font-family: $sans-serif-webfont;
+  font-size: $base-font_size;
+  line-height: $base-line_height;
+  background-color: $body-bg;
+  color: $color-text-primary;
+  position: relative;
+  @include font-smoothing(on);
+  @include mobileLayout {
+    font-size: $mobile-font_size;
+  }
+}
+
+
+// Gestion des flexbox du layout
+// -----------------------------
+body {
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+//.#{$class-prefix}-Main {
+//  display: flex;
+//  flex-direction: column;
+//  //flex-wrap: wrap;
+//  flex-basis: 0%;
+//  flex-grow: 1;
+//  flex-shrink: 0;
+//  overflow: hidden;
+//}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-basis: 0%;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+
+.plt-Content {
+  @include mobileLayout {
+    padding-left: ppm-pxem(10px);
+    padding-right: ppm-pxem(10px);
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+
+// Class génériques du layout :
+// ----------------------------
+.#{$class-prefix}-l-constrained {
+  @extend %#{$class-prefix}-l-constrained;
+}
+
+.#{$class-prefix}-l-constrained-inner {
+  @extend %#{$class-prefix}-l-constrained-inner;
+}
+
+.#{$class-prefix}-l-fullscreen, .#{$class-prefix}-l-fullwidth { @extend %#{$class-prefix}-l-full; }
+//.l-fullgrid { @extend %l-fullgrid; }
+.#{$class-prefix}-l-half { @extend %#{$class-prefix}-l-half; }
+.#{$class-prefix}-l-quarter { @extend %#{$class-prefix}-l-quarter; }
+
+

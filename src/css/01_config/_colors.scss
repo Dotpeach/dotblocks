@@ -1,0 +1,121 @@
+// Palette des couleurs
+// ====================
+
+// Debug
+// ------
+// Variables de couleurs de debug :
+$p : peachpuff !default;
+$l : lightgreen !default;
+$s : slateblue !default;
+$r : rebeccapurple !default;
+
+// Couleurs de base
+// ----------------
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-red  : #d01818 !default;
+$color-grey : #9599A5 !default;
+
+// Palette de couleurs
+// -------------------
+$endeavour: #005caa !default;
+$endeavour50: rgba(#005caa, 0.5) !default;
+$stratos:   #000055 !default;
+$dovegray:  #656565 !default;
+$japaneselaurel: #008100 !default;
+$cream-brulee : #ffdd98  !default;
+
+// Couleurs dotBlock par défaut :
+// -----------------------------
+$pelorous: #3BC3C8 !default;
+$easternblue: #1A9AA0 !default;
+$ernergyyellow: #F6E14D !default;
+$abbey: #4B4F56 !default;
+$manatee: #9599A5 !default;
+
+
+// Couleurs spécifiques Client
+// ---------------------------
+$color-text-black     : $dovegray !default;
+$color-text-black-dark: #000000 !default;
+$color-text-blue      : $endeavour !default;
+$color-text-blue-dark : $stratos !default;
+$happy-planet-color   : #69bf73 !default;
+
+
+// dotBlocks : Couleurs calculées
+// ------------------------------
+$dotBlock-emphasisColor: #3cc3c9 !default;
+$dotBlock-darkColor: #1a99a0 !default;
+$dotBlock-lightColor: #f6e04c !default;
+$dotBlock-lightBg: #fbfbfc !default;
+
+// Couleurs calculées depuis la couleur d'emphase
+$dotBlock-emphasisColor_dark: darken( $dotBlock-emphasisColor, 10% ) !default;
+$dotBlock-emphasisColor_light: lighten( $dotBlock-emphasisColor, 10% ) !default;
+$dotBlock-emphasisColor_adjacentLight: lighten(saturate(adjust-hue($dotBlock-emphasisColor, -64.7021), 24.1135), 9.2157) !default;
+$dotBlock-emphasisColor_adjacentDark: darken(desaturate(adjust-hue($dotBlock-emphasisColor, 64.7021), 24.1135), 9.2157) !default;
+
+// Variables pour le dégradé
+$dotBlock-gradientdarkColor: $dotBlock-emphasisColor_adjacentDark; // Couleur plus foncée pour le dégradé
+$dotBlock-gradientlightColor: $dotBlock-emphasisColor_adjacentLight; // Couleur plus claire pour le dégradé
+
+// Couleurs de panel de fond
+// -------------------------
+// Couleurs des panels (à charter)
+$panelLight: #50667f !default;
+$panelDark: #21384a !default;
+$panelDarkest: #142736 !default;
+
+$panelGreen: rgb(82,202,104);
+$panelGreen-darker: darken(desaturate(adjust-hue($panelGreen, -0.0268), 3.3094), 6.6667);
+$panelPink: rgb(214,104,131);
+$panelPink-darker: darken(desaturate(adjust-hue($panelPink, -0.0268), 3.3094), 6.6667);
+$panelOrange: rgb(241,137,107);
+$panelOrange-darker: darken(desaturate(adjust-hue($panelOrange, -0.0268), 3.3094), 6.6667);
+$panelLightGrey: rgb(248,248,248);
+$panelLightGrey-darker: darken(desaturate(adjust-hue($panelLightGrey, -0.0268), 3.3094), 6.6667);
+$panelEmerald: rgb(84,174,164);
+$panelEmerald-darker: darken(desaturate(adjust-hue($panelEmerald, -0.0268), 3.3094), 6.6667);
+$panelBlue: rgb(76,169,204);
+$panelBlue-darker: darken(desaturate(adjust-hue($panelBlue, -0.0268), 3.3094), 6.6667);
+$panelCyan: rgb(80,178,209);
+$panelCyan-darker: darken(desaturate(adjust-hue($panelCyan, -0.0268), 3.3094), 6.6667);
+
+// Layout
+// ------
+$body-bg: #fafafa !default;
+$header-bg: $endeavour !default;
+$footer-bg: $endeavour !default;
+$breadcrumb-bg: $endeavour50 !default;
+$newsletter-bg: $endeavour50 !default;
+$side-block-bg: rgba($cream-brulee, .8) !default;
+$grey-block-bg : #e7e7e7 !default;
+
+
+// Typo
+// ----------
+$color-text-primary: $color-text-black !default;
+$link-color        : $color-text-blue !default;
+$link-color_hover  : $color-text-blue-dark !default;
+$title-color: $endeavour !default;
+
+// Boutons :
+$btn-bg: $endeavour !default;
+$btn-altbg: #72BB6F !default;
+$btn-neutralbg: #BFBFBF !default;
+$btn-warmbg: #DB860D !default;
+$btn-white: #FFFFFF !default;
+
+// Border :
+$border-grey-color: #9d9d9d !default;
+$border-orange-color: $cream-brulee !default;
+$border-bleu-color: $endeavour !default;
+
+
+// Social
+$twitter-color  : #85d7f4 !default;
+$facebook-color : #5a8eca !default;
+$instagram-color : #7d5843 !default;
+$pinterest-color : #c8283d !default;
+$youtube-color : #e52d27 !default;

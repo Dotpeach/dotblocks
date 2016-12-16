@@ -1,0 +1,43 @@
+// Layout : type
+// ================
+// Styles génériques pour les textes du site
+
+// Styles par balise :
+strong {
+  @extend %webfont-bold;
+}
+
+em {
+  font-family: $webfont;
+  font-style: italic;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  @extend %color-transition;
+  &:hover {
+    color: $link-color_hover;
+  }
+  &.dwxLink {
+  }
+  &.is-bold {
+    @extend %webfont-bold;
+  }
+  &.is-white {
+    color: #fff !important;
+    &:hover {
+      color: $link-color;
+    }
+  }
+  &.is-blue {
+    color: $link-color !important;
+  }
+}
+
+// Titre principal d'une page :
+// -------------------------
+.t-title {
+
+}
+

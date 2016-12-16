@@ -1,0 +1,18 @@
+/Users/lanzalone/.rvm/rubies/ruby-2.0.0-p451/bin/ruby extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling color.c
+compiling oily_png_ext.c
+compiling operations.c
+compiling png_decoding.c
+compiling png_encoding.c
+compiling resampling.c
+linking shared-object oily_png/oily_png.bundle
+ld: warning: directory not found for option '-L/Users/travis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 oily_png.bundle ./.gem.20161216-42660-4azllm/oily_png
+installing default oily_png libraries

@@ -1,0 +1,210 @@
+// DwxBlocks : Content Images
+// --------------------------
+// Images à l'intérieur des blocks
+
+// Image à gauche
+&.has-leftImg {
+  @include smallLayout {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .l-constrained {
+    @include smallLayout {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .dwxBlock_pic {
+    width: 60%;
+    @include smallLayout {
+      position: relative;
+      width: 100%;
+    }
+    img {
+      display: block;
+      max-width: 565px;
+      @include smallLayout {
+        width: 100%;
+      }
+    }
+  }
+  .dwxBlock_content_side {
+    width: 40%;
+    float: right;
+    @include smallLayout {
+      width: 100%;
+      margin-bottom: rem(50px);
+      float: none;
+      position: relative;
+      z-index: $zindex-contentside;
+    }
+  }}
+
+// Image à droite
+&.has-rightImg {
+  @include smallLayout {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .l-constrained {
+    @include smallLayout {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .dwxBlock_pic {
+    width: 60%;
+    float: right;
+    @include smallLayout {
+      position: relative;
+      width: 100%;
+    }
+    img {
+      display: block;
+      float: right;
+      max-width: 565px;
+      @include smallLayout {
+        width: 100%;
+      }
+    }
+  }
+  .dwxBlock_content_side {
+    width: 40%;
+    float: left;
+    @include smallLayout {
+      width: 100%;
+      margin-bottom: rem(50px);
+      position: relative;
+      z-index: $zindex-contentside;
+    }
+  }
+}
+
+// Image centrée (sous le contenu)
+&.has-centerImg {
+  .dwxBlock_pic {
+    text-align: center;
+    width: 100%;
+    margin-top: rem(50px);
+    img {
+      display: inline-block;
+      @include smallLayout {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Image intégrée à gauche
+&.has-leftSideOffImg {
+  position: relative;
+  overflow: hidden;
+  .l-constrained {
+    @include smallLayout {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @include smallLayout {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .dwxBlock_content_side {
+    width: 40%;
+    float: right;
+    @include smallLayout {
+      width: 100%;
+      margin-bottom: rem(50px);
+      position: relative;
+      z-index: $zindex-contentside;
+    }
+  }
+  .dwxBlock_offcanvasPic {
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    width: 60%;
+    @include smallLayout {
+      position: relative;
+      width: 100%;
+      left: auto;
+      z-index: $zindex-offcanvaspic;
+    }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 755px;
+    }
+  }
+}
+
+// Image intégrée à droite
+&.has-rightSideOffImg {
+  position: relative;
+  overflow: hidden;
+  .l-constrained {
+    @include smallLayout {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  @include smallLayout {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .dwxBlock_content_side {
+    width: 40%;
+    float: left;
+    @include smallLayout {
+      width: 100%;
+      margin-bottom: rem(50px);
+      position: relative;
+      z-index: $zindex-contentside;
+    }
+  }
+  .dwxBlock_offcanvasPic {
+    position: absolute;
+    right: -10%;
+    bottom: 0;
+    width: 60%;
+    @include smallLayout {
+      position: relative;
+      width: 100%;
+      right: auto;
+    }
+    img {
+      display: block;
+      width: 100%;
+      max-width: 755px;
+    }
+  }
+}
+
+// Image adaptative
+&.has-adaptiveContent {
+  .dwxBlock_content {
+    @include display-flex;
+    @include flex-direction(row);
+    .dwxBlock_content_side {
+      @include flex-grow(1);
+    }
+    .dwxBlock_pic {
+      padding: rem(20px) 0;
+      flex-grow: 1;
+      flex-shrink:0;
+    }
+  }
+  @include smallLayout {
+    .dwxBlock_content {
+      @include flex-direction(column);
+      .dwxBlock_content_side {
+        @include flex-basis(100%);
+      }
+      .dwxBlock_pic {
+        @include flex-basis(100%);
+        text-align: 100%;
+        @include align-self(center);
+      }
+    }
+  }
+}

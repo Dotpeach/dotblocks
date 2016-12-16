@@ -1,0 +1,77 @@
+// Variables
+// ==========
+// Document est destiné à contenir toutes les variables spécifiques du thème
+
+// Thème
+// -----
+$class-prefix: 'dot' !default;
+$class-no-js: 'no-js' !default;
+
+// Typographie
+// -----------
+// Variables classiques :
+$base-face            : Helvetica, Arial, "Trebuchet MS", sans-serif !default;
+$serif-face           : Georgia, "Times New Roman", serif !default;
+$base-font_size       : 16px !default;
+$mobile-font_size     : 14px !default;
+$base-line_height     : 1.5  !default;
+
+
+// Variables typo de base
+$sans-serif-webfont          : 'robotoregular', $base-face !default;
+$sans-serif-webfont_medium   : 'robotomedium', 'robotoregular', $base-face !default;
+$sans-serif-webfont_bold     : 'robotobold', 'robotoregular', $base-face !default;
+$sans-serif-webfont_light    : 'robotolight', 'robotoregular', $base-face !default;
+$content-font                : $sans-serif-webfont !default;
+$webfont                     : 'amatic_scbold', $base-face !default;
+$webfont-bold                : 'amatic_scbold', $base-face !default;
+$heading-font                : 'amatic_scbold', $base-face !default;
+$alternate-webfont           : 'opensans-condlight', $base-face !default;
+$alternate-webfont-bold      : 'opensans-condbold', $base-face !default;
+
+// Layout
+// ------
+// Dimension du layout :
+$site-width            : 100% !default;
+$container-width       : 1440px !default;
+$inner-container-width : 1120px !default;
+
+// Variables de la grille verticale :
+//$column-width: 103px !default;
+//$gutter-width: 28px !default;
+//$columns     : 12 !default;
+//$site-width  : 1600px !default;
+//
+//// Valeur en % d'une goutière de la grille
+//$horizontal-gutter: 1.75% !default; // en dehors de l-constrained
+//$constrained-gutter: 2% !default; // à l'intérieur de l-constrained
+//
+//// Variables de la grille horizontale :
+//$vertical-gutter: 14px !default;
+
+// Dimensions de l'UI
+// -------------------
+
+// Valeurs des z-index
+// -------------------
+$zindex-mobileheader: 70 !default;
+$zindex-stickyheader: 65 !default;
+$zindex-cookie: 60 !default;
+$zindex-header: 50 !default;
+$zindex-nav: 30 !default;
+$zindex-contentnav: 15 !default;
+$zindex-subnav: 10 !default;
+$zindex-contentside: 2 !default;
+$zindex-offcanvaspic: 0 !default;
+
+// Variable des animations
+// ---------------------
+$transition-duration: .3s;
+
+// Variables liées aux dotBlocks :
+// --------------------------
+$dotBlock-txtcolor: rgba(#000, 0.74) !default;
+$dotBlock-minheight: 320px !default;
+$dotBlock-firstheight: 450px !default;
+$dotBlock-defaultBg: #fff !default;
+$dotBlock-defaultPadding: 7% !default;

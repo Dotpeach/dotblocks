@@ -1,0 +1,19 @@
+{{! test.hbs }}
+{{! ------------------------------------------------------------------------- }}
+
+{{! VARIABLES STATIQUES }}
+{{! ------------------------------------------------------------------------- }}
+{{! Préférez mettre vos variables dans le fichier:                            }}
+{{!     ./src/data/pages/test.json                                            }}
+{{! De même, les variables "globales" d'environnement devraient être dans:    }}
+{{!     ./src/data/data.json                                                  }}
+
+{{! LAYOUT }}
+{{! ------------------------------------------------------------------------- }}
+{{#> layouts_default}}
+
+  <p>{{description}}</p>
+
+  {{> _exemple}}
+
+{{/layouts_default}}

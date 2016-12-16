@@ -1,0 +1,15 @@
+// Layout : menu principal
+// =======================
+//
+
+.header_nav {}
+.header_nav_list {}
+.header_nav_item {
+  display: inline-block;
+  + .header_nav_item {
+    margin-left: rem(10px);
+  }
+}
+.header_nav_lk {
+
+}

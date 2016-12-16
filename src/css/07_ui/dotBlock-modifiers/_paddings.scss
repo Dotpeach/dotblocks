@@ -1,0 +1,108 @@
+// DwxBlocks : Paddings
+// ----------------------
+
+&.has-smallPaddings {
+  padding: 40px;
+}
+&.has-smallTopPadding {
+  padding-top: 40px !important;
+}
+&.has-smallBottomPadding {
+  padding-bottom: 40px !important;
+}
+&.has-smallLeftPadding {
+  padding-left: 40px !important;
+}
+&.has-smallrightPadding {
+  padding-right: 40px !important;
+}
+&.has-mediumPaddings {
+  padding: 80px;
+  @include smallLayout {
+    padding: 40px 0;
+  }
+}
+&.has-mediumTopPadding {
+  padding-top: 80px !important;
+  @include smallLayout {
+    padding-top: 40px !important;
+  }
+}
+&.has-mediumBottomPadding {
+  padding-bottom: 80px !important;
+  @include smallLayout {
+    padding-bottom: 40px !important;
+  }
+}
+&.has-mediumLeftPadding {
+  padding-left: 80px !important;
+  @include smallLayout {
+    padding-left: 40px !important;
+  }
+}
+&.has-mediumRightPadding {
+  padding-right: 80px !important;
+  @include smallLayout {
+    padding-right: 40px !important;
+  }
+}
+&.has-largePaddings {
+  padding: 130px;
+  @include smallLayout {
+    padding: 40px 0;
+  }
+}
+&.has-largeTopPadding {
+  padding-top: 130px !important;
+  @include smallLayout {
+    padding-top: 40px !important;
+  }
+}
+&.has-largeBottomPadding {
+  padding-bottom: 130px !important;
+  @include smallLayout {
+    padding-bottom: 40px !important;
+  }
+}
+&.has-largeLeftPadding {
+  padding-left: 130px !important;
+  @include smallLayout {
+    padding-left: 40px !important;
+  }
+}
+&.has-largeRightPadding {
+  padding-right: 130px !important;
+  @include smallLayout {
+    padding-right: 40px !important;
+  }
+}
+&.has-largestPaddings {
+  padding: 200px;
+  @include smallLayout {
+    padding: 40px 0;
+  }
+}
+&.has-largestBottomPadding {
+  padding-bottom: 200px !important;
+  @include smallLayout {
+    padding-bottom: 40px !important;
+  }
+}
+&.has-largestTopPadding {
+  padding-top: 200px !important;
+  @include smallLayout {
+    padding-top: 40px !important;
+  }
+}
+&.has-largestLeftPadding {
+  padding-left: 200px !important;
+  @include smallLayout {
+    padding-left: 40px !important;
+  }
+}
+&.has-largestRightPadding {
+  padding-right: 200px !important;
+  @include smallLayout {
+    padding-right: 40px !important;
+  }
+}

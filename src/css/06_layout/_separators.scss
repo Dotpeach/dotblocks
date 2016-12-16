@@ -1,0 +1,170 @@
+// Row : Séparateurs
+// =================
+// Lignes de séparations entre les lignes
+
+%borderImage {
+  border-image-source: url("/img/bg/row-separator.png");
+  border-image-repeat: round;
+  border-image-slice: 3;
+}
+
+%borderImage--dark {
+   border-image-source: url("/img/bg/row-separator--dark.png");
+   border-image-repeat: round;
+   border-image-slice: 3;
+ }
+
+%borderImage--light{
+  border-image-source: url("/img/bg/row-separator--light.png");
+  border-image-repeat: round;
+  border-image-slice: 3;
+}
+
+%plt-separator {
+  position: absolute;
+  max-width: $inner-container-width;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @extend %borderImage;
+}
+
+%plt-separator--dark {
+  @extend %plt-separator;
+  border-image-source: url("/img/bg/row-separator--dark.png");
+}
+
+%plt-separator--light {
+  @extend %plt-separator;
+  border-image-source: url("/img/bg/row-separator--light.png");
+}
+
+
+// Séparateur du haut
+// ------------------
+.has-topSeparator {
+  position: relative;
+  &::before {
+    @extend %plt-separator;
+    top: 0;
+    border-top: 4px solid transparent;
+  }
+}
+.has-topSeparator--full {
+  &::before {
+    @extend %plt-separator;
+    top: 0;
+    border-top: 4px solid transparent;
+    right: 0;
+    left: 0;
+  }
+}
+
+.has-topSeparator--dark {
+  @extend .has-topSeparator;
+  &::before {
+    @extend %plt-separator--dark;
+  }
+}
+
+.has-topSeparator--light {
+  @extend .has-topSeparator;
+  &::before {
+    @extend %plt-separator--light;
+  }
+}
+
+// Séparateur du bas
+// ------------------
+.has-bottomSeparator {
+  position: relative;
+  &::after {
+    @extend %plt-separator;
+    bottom: 0;
+    border-top: 4px solid transparent;
+  }
+}
+
+.has-bottomSeparator--dark {
+  @extend .has-bottomSeparator;
+  &::before {
+    @extend %plt-separator--dark;
+  }
+}
+
+
+// Deux séparateurs en même temps
+// ------------------------------
+.has-bothSeparator {
+  @extend .has-bottomSeparator;
+  @extend .has-topSeparator;
+}
+
+
+// Placholder de création de bordure
+// ------------------
+%has-border {
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  @extend %borderImage;
+}
+
+$borders : ('top', 'right', 'bottom', 'left');
+
+@each $border in $borders {
+  // Création de chaque placeholder
+  %has-#{$border}Border {
+    @extend %borderImage;
+    box-sizing: border-box;
+    border-#{$border}: 4px solid transparent;
+  }
+  // Création de la classe associées
+  .has-#{$border}Border {
+    @extend %has-#{$border}Border;
+  }
+
+  %has-#{$border}Border--dark {
+    @extend %borderImage--dark;
+    box-sizing: border-box;
+    border-#{$border}: 4px solid transparent;
+  }
+  // Création de la classe associées
+  .has-#{$border}Border--dark {
+    @extend %has-#{$border}Border--dark;
+  }
+
+  %has-#{$border}Border--light {
+    @extend %borderImage--light;
+    box-sizing: border-box;
+    border-#{$border}: 4px solid transparent;
+  }
+  // Création de la classe associées
+  .has-#{$border}Border--light {
+    @extend %has-#{$border}Border--light;
+  }
+}
+
+%has-dropshadow {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 5%;
+    left: 0;
+    transform: skewX(.8deg);
+    transform-origin: 0 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0,0,.2);
+    background-color: rgba(0, 0,0,.2);
+    z-index: -1;
+  }
+}
+.has-dropshadow {
+  @extend %has-dropshadow;
+}
